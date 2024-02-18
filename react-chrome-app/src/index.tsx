@@ -16,6 +16,7 @@ globalStyles.innerHTML = `
   background: #ffffff;
   border-right: 1px solid #c2c2c2;
   z-index: 999999999;
+  color: #000000;
   }
 `;
 document.body.appendChild(rootElement);

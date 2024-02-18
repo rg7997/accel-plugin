@@ -1,8 +1,11 @@
 function App() {
+
+  
   return (
     <div>
       <header>
-        <h2>Hello From React App 👋</h2>
+        <h2>Hello From Accel Plugin 👋</h2>
+        <button onClick={() => alert('Open')}>Open Accel Plugin</button>
       </header>
     </div>
   );
