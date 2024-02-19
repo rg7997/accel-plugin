@@ -1,17 +1,19 @@
-import { Button, ConfigProvider } from 'antd';
+import { useState } from 'react';
+import { Button, ConfigProvider, Modal } from 'antd';
 import "./App.css";
 
 function App() {
 
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   return (
       <ConfigProvider theme={{ token: {  } }}>
-
-    <div>
-      <header>
-        <h2 className='text-green-500 mt-4'>Hello From Accel Plugin 1👋</h2>
-        <Button type="primary" onClick={() => alert('Open')}>Open Accel Plugin</Button>
-      </header>
-    </div>
+        <div>
+          <header>
+            <Button type="primary" onClick={() => setShowLoginModal(true)}>Open Accel Plugin</Button>
+          </header>
+          <Modal title="Login" open={showLoginModal} closeIcon={false} onOk={() => setShowLoginModal(false)} onCancel={() => setShowLoginModal(false)} />
+        </div>
     </ConfigProvider>
   );
 }
